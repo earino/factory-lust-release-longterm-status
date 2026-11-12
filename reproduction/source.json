@@ -1,0 +1,97 @@
+{
+  "construction": {
+    "access_recipe": "Query FeatureServer layer 1 (Releases) with where=Reported_Date BETWEEN TIMESTAMP '2004-01-01' AND TIMESTAMP '2008-12-31', outFields=State,County,Reported_Date,Status,Substance,Population_within_1500ft,DomesticWells_within_1500ft,LandUse,Within_SPA,Within_100yr_Floodplain,EPA_Region, f=json, and resultOffset/resultRecordCount paging (2,000 per page; confirm whether 32,000 is accepted for this layer). Convert Reported_Date epoch milliseconds to UTC dates, drop Status='Unknown' and null dates, and restrict to the 50 states plus DC. No join to the Facility or UST tank layers is needed.",
+    "expected_size": "531,310 total release records; the 2004-2008 50-state cohort is estimated at roughly 60,000-90,000 rows at construction time, a bounded first release.",
+    "format": "ArcGIS REST JSON pages converted to CSV or Parquet, one row per release, keyed by LUST_ID.",
+    "source_examples": "Observed: Facility_ID='AL18720', LUST_ID='AL2557', Reported_Date=1254412800000 (2009-10-01 UTC), Status='No Further Action', Substance='' (blank). The field list documents Status, Reported_Date, Substance, Population_within_1500ft, DomesticWells_within_1500ft, LandUse, Within_SPA and Within_100yr_Floodplain."
+  },
+  "dataset_id": "lust-release-longterm-status",
+  "evidence": [
+    {
+      "claim": "EPA documents UST Finder as national UST facility and release data with state and territory collection vintages.",
+      "quote": "It provides the attributes and locations of active and closed USTs, UST facilities, and UST releases in states as of 2018-2019, US territories as of 2020-2021, and Tribal lands as of 2025.",
+      "url": "https://www.epa.gov/ust/ust-finder"
+    },
+    {
+      "claim": "EPA's standard data license places EPA-produced data in the U.S. public domain.",
+      "quote": "Unless otherwise specified, all data produced by the U.S EPA is by default in the public domain and is not subject to domestic copyright protection under 17 U.S.C. \u00a7 105.",
+      "url": "https://edg.epa.gov/EPA_Data_License.html"
+    },
+    {
+      "claim": "The Releases layer carries Reported_Date, Status and Substance fields and is time-enabled on the report date.",
+      "quote": "\"startTimeField\":\"Reported_Date\"",
+      "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1?f=json"
+    },
+    {
+      "claim": "The national Releases layer contains 531,310 records.",
+      "quote": "{\"count\":531310}",
+      "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=1%3D1&returnCountOnly=true&f=json"
+    },
+    {
+      "claim": "A documented record shows the cleanup-status vocabulary on an actual release.",
+      "quote": "\"Status\":\"No Further Action\"",
+      "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Facility_ID%3D%27AL18720%27&outFields=Facility_ID,LUST_ID,Reported_Date,Status,Substance&f=json"
+    },
+    {
+      "claim": "The UST Finder user guide documents the three release status values.",
+      "quote": "There are three release Status types: Open, No Further Action, and Unknown.",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P101AGHS.TXT"
+    }
+  ],
+  "limitations": [
+    "The release layer has no closure date: Status is a snapshot as of each state's 2018-2019 collection, so the label is 'not yet No Further Action at the snapshot', not a fixed-horizon survival outcome.",
+    "Follow-up length differs slightly by report year (about 10-14 years), so report year and horizon are partly confounded; chronological splits preserve the shift rather than removing it.",
+    "State programs differ in what counts as a reportable release, when reporting began, and how No Further Action is granted; state is both a feature and a source of label heterogeneity.",
+    "Release Substance is blank for some records and states, and status Unknown exists (notably Kentucky), so missingness and Unknown exclusions must be modelled explicitly.",
+    "Population, wells, land use, source-water and floodplain fields are current-vintage EPA overlays, not measurements available in 2004-2008; they are slow-changing proxies only.",
+    "The compilation is state-sourced and EPA-standardized; state agencies are credited in the layer metadata, and state-specific terms were not separately researched.",
+    "This is retrospective current-vintage research; it does not establish that the fields were operationally available to a manager at the historical decision instant."
+  ],
+  "reason": "EPA's UST Finder Releases layer is a directly queryable, documented national compilation of 531,310 leaking-underground-storage-tank release records, each with a report date and a later cleanup status. That supports a fixed-cohort forward label (Open vs No Further Action at the 2018-2019 state snapshot) with no cross-agency join, no accounts, and independent release-level observations. EPA designates its data public domain under 17 U.S.C. 105.",
+  "source": {
+    "attribution": "EPA's Office of Underground Storage Tanks EPA's Office of Research and Development The Association of State and Territorial Solid Waste Management Officials",
+    "citation": "",
+    "documentation_url": "https://www.epa.gov/ust/ust-finder",
+    "license": "EPA Public Domain License (U.S. public domain; 17 U.S.C. 105)",
+    "publisher": "U.S. Environmental Protection Agency, Office of Underground Storage Tanks and Office of Research and Development, with the Association of State and Territorial Solid Waste Management Officials",
+    "redistribution": true,
+    "terms_excerpt": "Unless otherwise specified, all data produced by the U.S EPA is by default in the public domain and is not subject to domestic copyright protection under 17 U.S.C. \u00a7 105.",
+    "terms_url": "https://edg.epa.gov/EPA_Data_License.html",
+    "urls": [
+      "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=1%3D1&outFields=Facility_ID,LUST_ID,State,County,Reported_Date,Status,Substance,Population_within_1500ft,DomesticWells_within_1500ft,LandUse,Within_SPA,Within_100yr_Floodplain,EPA_Region&f=json&resultOffset=0&resultRecordCount=2000"
+    ]
+  },
+  "task": {
+    "decision_user": "A state UST/LUST program manager triaging a newly reported release for corrective-action priority.",
+    "features": [
+      {
+        "availability": "recorded on the state release record at report time, blank for many records and states; blank stays blank rather than being imputed",
+        "evidence_url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1",
+        "meaning": "Substance recorded on the release record, carried as trimmed text with a blank missing category rather than an invented level. The source does not document a fixed substance vocabulary.",
+        "name": "substance_released"
+      },
+      {
+        "availability": "present on every included release record, checked against the 51 declared jurisdictions, and fixed by the administering program rather than by any later outcome",
+        "evidence_url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1",
+        "meaning": "State jurisdiction administering the release, shipped as a two-letter USPS code, capturing program-practice differences at the report instant.",
+        "name": "state"
+      },
+      {
+        "availability": "derived at construction from the parsed report date on every included record and therefore fixed at the report instant",
+        "evidence_url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1",
+        "meaning": "Calendar year of the recorded report date, capturing program-era and reporting-system changes.",
+        "name": "report_year"
+      }
+    ],
+    "outcome_horizon": "Cleanup status as of each state's 2018-2019 data collection, i.e. roughly 10-14 years after the report for the 2004-2008 cohort.",
+    "population": "Release records whose Reported_Date falls from 2004-01-01 through 2008-12-31 in the 50 states or the District of Columbia, with a parsed non-null Reported_Date and a snapshot Status of Open or No Further Action. Records from territories and tribal jurisdictions, records whose snapshot Status is Unknown or blank, records with a missing report date, and release rows that exactly duplicate another row on facility identifier, release identifier, report date, jurisdiction and snapshot status are excluded, and their counts are reported rather than silently dropped. The exclusion of Unknown-status records is the one outcome-conditioned eligibility rule and is fixed by the task, not chosen from scores.",
+    "prediction_time": "At the release report date recorded by the state program (Reported_Date), when the release first enters the state program record and before any cleanup status is known. Only fields fixed at that instant are scored; spatial overlays attached at the later 2018-2019 compilation ship as descriptive carries.",
+    "question": "Will a leaking underground storage tank release reported between 2004 and 2008 still be classified Open, rather than No Further Action, at the 2018-2019 state data snapshot?",
+    "simple_references": "Majority-class rate, state-only base rates, state-and-report-year base rates, and a logistic model using only state and report year. All such label-derived rates use training labels only and are never shipped as features.",
+    "split_policy": "Fixed chronological boundaries by Reported_Date: train 2004-01-01 through 2005-12-31, eval 2006-01-01 through 2006-12-31, holdout 2007-01-01 through 2008-12-31. No embargo: rows are independent release events with features fixed at report, and the outcome is measured at one later snapshot.",
+    "target": "1 if Status equals 'Open' at the 2018-2019 state data snapshot; 0 if Status equals 'No Further Action'; records with 'Unknown' or missing Status are excluded.",
+    "usefulness": "The snapshot cleanup status is observed years after the report and is absent from the decision-time record, so a model must combine the released substance, the administering jurisdiction and the reporting era rather than copy a field. It supports triage of which newly reported releases are likely to remain unresolved and need earlier remedial attention. Because the site-setting spatial overlays postdate the report, they are not scored, so the honest signal is jurisdiction, product type and era; a model is useful only if it beats state-and-report-year base rates."
+  },
+  "title": "Will a reported U.S. leaking underground storage tank release still be unresolved a decade later? Predicting long-run LUST cleanup status from report-time product and site attributes",
+  "verdict": "ready"
+}

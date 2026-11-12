@@ -1,0 +1,177 @@
+{
+  "publisher-terms.snapshot": {
+    "url": "https://edg.epa.gov/EPA_Data_License.html",
+    "bytes": 10968,
+    "sha256": "deff40a15da6593a56f4c3bf4a975b1430c809635d382da95cb9dbd3da4ef052",
+    "retrieved_at_unix": 1794485169.8973436,
+    "transport_attempts": 1
+  },
+  "publisher-documentation.snapshot": {
+    "url": "https://www.epa.gov/ust/ust-finder",
+    "bytes": 59179,
+    "sha256": "9d492e94fa09cfc0c69f80a443b2198afeaf589d86517208f6978bd00160a2c7",
+    "retrieved_at_unix": 1794485171.1369104,
+    "transport_attempts": 1
+  },
+  "lust_layer_metadata.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1?f=json",
+    "bytes": 14626,
+    "sha256": "a2ed52a90fba8ebbd30c66d26a5a0add76a75719e5509cae2218a7b3c401a17c",
+    "retrieved_at_unix": 1794485171.9076517,
+    "transport_attempts": 1
+  },
+  "epa_ust_finder.html": {
+    "url": "https://www.epa.gov/ust/ust-finder",
+    "bytes": 59179,
+    "sha256": "9d492e94fa09cfc0c69f80a443b2198afeaf589d86517208f6978bd00160a2c7",
+    "retrieved_at_unix": 1794485171.9352865,
+    "transport_attempts": 1
+  },
+  "epa_data_license.html": {
+    "url": "https://edg.epa.gov/EPA_Data_License.html",
+    "bytes": 10968,
+    "sha256": "deff40a15da6593a56f4c3bf4a975b1430c809635d382da95cb9dbd3da4ef052",
+    "retrieved_at_unix": 1794485172.7084444,
+    "transport_attempts": 1
+  },
+  "lust_window_count.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&returnCountOnly=true&f=json",
+    "bytes": 15,
+    "sha256": "3e60757625aa29de9b1e70e708740c8ac476e3009f1ed3e7482000bb02ae8464",
+    "retrieved_at_unix": 1794485173.3732352,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0000.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=0&resultRecordCount=2000&f=json",
+    "bytes": 709507,
+    "sha256": "784818ce64e07c145c96164edcb29d324df15f481ccb7e7d589c9de3b3ae7e0f",
+    "retrieved_at_unix": 1794485176.3820906,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0001.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=2000&resultRecordCount=2000&f=json",
+    "bytes": 710386,
+    "sha256": "d2911e007255904b97e117eea76f6c22be4d8bfcd801f73ca8e666ac8936e41c",
+    "retrieved_at_unix": 1794485183.0111465,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0002.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=4000&resultRecordCount=2000&f=json",
+    "bytes": 691019,
+    "sha256": "c4889a9d3609103e2cf40319918600b550c3f4798c23c3cf847e626ec58e0e48",
+    "retrieved_at_unix": 1794485187.5271554,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0003.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=6000&resultRecordCount=2000&f=json",
+    "bytes": 702625,
+    "sha256": "6360b2336bc97aa3f31ee8bf3be207fee70344a1f28a6be94354fc409938ad55",
+    "retrieved_at_unix": 1794485194.3924665,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0004.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=8000&resultRecordCount=2000&f=json",
+    "bytes": 712380,
+    "sha256": "dcc2e6ba33219f2f959833d632a3225e22953078a8fa21ad9abd7f18920684a4",
+    "retrieved_at_unix": 1794485204.6815114,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0005.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=10000&resultRecordCount=2000&f=json",
+    "bytes": 698709,
+    "sha256": "de69a3c806fd7e812efc6b4debe4a519ce7c2c15647fb83334ddffe27603643f",
+    "retrieved_at_unix": 1794485212.4168382,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0006.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=12000&resultRecordCount=2000&f=json",
+    "bytes": 700764,
+    "sha256": "5a3a414fbaaf3fdf7206ece273b34af4438a299baf1ff2c6abd03d9afd0f1aa7",
+    "retrieved_at_unix": 1794485220.333547,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0007.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=14000&resultRecordCount=2000&f=json",
+    "bytes": 701962,
+    "sha256": "77373b14562ce9abc0ff1f78112eeb6f847fd53599c8801f4fdffdc53fa6e889",
+    "retrieved_at_unix": 1794485227.7265537,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0008.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=16000&resultRecordCount=2000&f=json",
+    "bytes": 715486,
+    "sha256": "48192d14a479923961be5a0cac4fbbedba0c3fc50f887266616a79e0e230aa5d",
+    "retrieved_at_unix": 1794485236.5171645,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0009.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=18000&resultRecordCount=2000&f=json",
+    "bytes": 710677,
+    "sha256": "b13fb1c14fe3d598ae59bd21e72c85e5c6fdca31e96220ee4bbd9348df4696cd",
+    "retrieved_at_unix": 1794485252.1824472,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0010.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=20000&resultRecordCount=2000&f=json",
+    "bytes": 728707,
+    "sha256": "474875cbcadd06d6e976378ccfcac0154c2ecf533736590d136ee75890138a07",
+    "retrieved_at_unix": 1794485263.6765354,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0011.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=22000&resultRecordCount=2000&f=json",
+    "bytes": 711717,
+    "sha256": "fc48b27bd6ef443dc0a0750cf1e7ae9839e15d84c75a02d907ef535089af07ac",
+    "retrieved_at_unix": 1794485278.5824718,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0012.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=24000&resultRecordCount=2000&f=json",
+    "bytes": 714556,
+    "sha256": "50ba7a1d791fe686dff19fa5d8332965aa3af1d8ad7ca5b8d8be84ae789db169",
+    "retrieved_at_unix": 1794485301.2296414,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0013.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=26000&resultRecordCount=2000&f=json",
+    "bytes": 705630,
+    "sha256": "21f52af57f694bf2e737c18cf0f0d0393bc235ff13aac81d1ee8aa6cad07707d",
+    "retrieved_at_unix": 1794485314.1834538,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0014.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=28000&resultRecordCount=2000&f=json",
+    "bytes": 703292,
+    "sha256": "53d5b4dba48439f36a3cf5dcc66b918f47ff78ac473527a79178603a311304e9",
+    "retrieved_at_unix": 1794485331.7032819,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0015.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=30000&resultRecordCount=2000&f=json",
+    "bytes": 717726,
+    "sha256": "52813e2cf2108d9ab089f0074d5fbca57fb2a88e0477cb19a2baa619ede46daa",
+    "retrieved_at_unix": 1794485344.283288,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0016.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=32000&resultRecordCount=2000&f=json",
+    "bytes": 753724,
+    "sha256": "7ab3592607043895694d50bc2e4304fd6d0c934cef31bc705cd6078d5f82bfa0",
+    "retrieved_at_unix": 1794485355.4407148,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0017.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=34000&resultRecordCount=2000&f=json",
+    "bytes": 736675,
+    "sha256": "595ec8af8b3c54de3a73a67cb2646fc69e22148439649acae26b928344218e7f",
+    "retrieved_at_unix": 1794485379.7087898,
+    "transport_attempts": 1
+  },
+  "lust_releases_page_0018.json": {
+    "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1/query?where=Reported_Date+BETWEEN+TIMESTAMP+%272004-01-01+00%3A00%3A00%27+AND+TIMESTAMP+%272008-12-31+23%3A59%3A59%27&outFields=OBJECTID%2CFacility_ID%2CLUST_ID%2CState%2CCounty%2CReported_Date%2CStatus%2CSubstance%2CPopulation_within_1500ft%2CDomesticWells_within_1500ft%2CLandUse%2CWithin_SPA%2CWithin_100yr_Floodplain%2CEPA_Region&returnGeometry=false&orderByFields=OBJECTID+ASC&resultOffset=36000&resultRecordCount=2000&f=json",
+    "bytes": 545489,
+    "sha256": "d2a44821578afe435c529489d49e6c501d48856e29583bd2649fc48ab87f510d",
+    "retrieved_at_unix": 1794485399.0748749,
+    "transport_attempts": 1
+  }
+}

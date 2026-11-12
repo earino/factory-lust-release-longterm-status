@@ -1,0 +1,278 @@
+{
+  "carry_columns": [
+    "county",
+    "epa_region",
+    "reported_date",
+    "population_within_1500ft",
+    "domestic_wells_within_1500ft",
+    "land_use",
+    "within_source_water_protection_area",
+    "within_100yr_floodplain"
+  ],
+  "evaluation_contract": {
+    "access": "isolated_rows",
+    "cross_row_audit": {
+      "auxiliary_files_review": "Only the three declared CSVs are written. No fixture labels, rate tables, scaffolds or auxiliary evaluation files are produced.",
+      "probes": [],
+      "rationale": "Rows are independent release records with report-time fields. No group base rate, residual, neighbour statistic or other cross-row quantity is shipped as a feature."
+    },
+    "feature_evidence": {
+      "county": {
+        "availability": "carried as a descriptive join and audit column only, never a scored feature",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, County field",
+        "status": "verified"
+      },
+      "domestic_wells_within_1500ft": {
+        "availability": "spatial overlay attached when the layer was compiled for the 2018-2019 state collection; carried as a descriptive column only and never scored, because it is not a measurement available at the 2004-2008 report date",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, DomesticWells_within_1500ft field",
+        "status": "assumed"
+      },
+      "epa_region": {
+        "availability": "carried as a descriptive audit column only, never a scored feature",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, EPA_Region field",
+        "status": "verified"
+      },
+      "land_use": {
+        "availability": "spatial overlay attached when the layer was compiled; carried as a descriptive column only and never scored, because it is not a measurement available at the report date",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, LandUse field",
+        "status": "assumed"
+      },
+      "lust_id": {
+        "availability": "source LUST_ID repeats on generic values such as Release 1; the shipped lust_id is a deterministic composite of the source release identifier, the facility identifier and the layer OBJECTID, unique and stable within this snapshot, and is never scored",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, LUST_ID, Facility_ID and OBJECTID fields",
+        "status": "verified"
+      },
+      "population_within_1500ft": {
+        "availability": "spatial overlay derived from 2010 Census blocks and attached when the layer was compiled for the 2018-2019 collection; carried as a descriptive column only and never scored, because it is not a measurement available at the 2004-2008 report date",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, Population_within_1500ft field",
+        "status": "assumed"
+      },
+      "report_year": {
+        "availability": "derived at construction from the parsed report date on every included record and therefore fixed at the report instant",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, Reported_Date field derived to its calendar year",
+        "status": "verified"
+      },
+      "reported_date": {
+        "availability": "present on every release record; parsed as an ArcGIS date value and converted to a UTC calendar date. Ships as the chronological time column and as a carried audit column, never as a scored feature",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, Reported_Date field, the layer start time field",
+        "status": "verified"
+      },
+      "state": {
+        "availability": "present on every included release record, checked against the 51 declared jurisdictions, and fixed by the administering program rather than by any later outcome",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, State field with a two-letter code fallback from the facility identifier",
+        "status": "verified"
+      },
+      "substance_released": {
+        "availability": "recorded on the state release record at report time, blank for many records and states; blank stays blank rather than being imputed",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, Substance field",
+        "status": "verified"
+      },
+      "within_100yr_floodplain": {
+        "availability": "spatial overlay attached when the layer was compiled; carried as a descriptive column only and never scored, because it is not a measurement available at the report date",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, Within_100yr_Floodplain field",
+        "status": "assumed"
+      },
+      "within_source_water_protection_area": {
+        "availability": "spatial overlay attached when the layer was compiled; carried as a descriptive column only and never scored, because it is not a measurement available at the report date",
+        "source": "EPA UST Finder Releases FeatureServer layer 1, Within_SPA field",
+        "status": "assumed"
+      }
+    },
+    "limitations": [
+      "The release layer has no closure date; Status is a snapshot as of each state 2018-2019 collection, so the label is not yet No Further Action at the snapshot, not a fixed-horizon survival outcome.",
+      "Follow-up length differs by report year, roughly 10 to 14 years, so report year and outcome horizon are partly confounded; the chronological splits preserve that shift rather than removing it.",
+      "State programs differ in what counts as a reportable release, when reporting began, and how No Further Action is granted; state is both a feature and a source of label heterogeneity.",
+      "Only report-time fields are scored. The five spatial overlays, population and domestic wells within 1500 feet, land use, source water protection area and 100-year floodplain, are attached at the 2018-2019 compilation and the population overlay is derived from 2010 Census blocks, so they postdate the report instant and are shipped as unscored descriptive carry columns instead of features.",
+      "Substance is blank for most records, so the product-type signal is thin; blank values are kept blank rather than imputed, and a fully blank scored feature column fails rather than shipping empty.",
+      "Exact duplicate release records sharing facility identifier, release identifier, report date, jurisdiction and snapshot status are collapsed to the single row with the lowest layer OBJECTID before splitting. This may also merge genuinely separate same-day releases at one facility that share a generic release identifier such as Release 1, which the source cannot distinguish by attributes alone.",
+      "The population and domestic well counts within 1500 feet are continuous counts with many distinct values, so they are declared as high cardinality and must be treated as numeric rather than categorical levels.",
+      "The compilation is state-sourced and EPA-standardised; state agency terms were not separately researched.",
+      "This is retrospective current-vintage research; it does not establish that the fields were operationally available to a manager at the historical decision instant, and the training label timing is unverified."
+    ],
+    "selection": {
+      "evidence": "All scored features (substance_released, state, report_year) are read from the release record at its Reported_Date, before any cleanup status exists. The current-vintage spatial overlays ship only as unscored descriptive carry columns, so they are not used to select or define the scored feature set. The row cohort is fixed by the 2004-2008 report window, the 50-state plus District of Columbia jurisdiction rule, exact duplicate collapse, and the frozen population rule that excludes Unknown-status records at the later snapshot; that exclusion is outcome conditioning and is documented in timing.row_selection rather than used to choose features.",
+      "kind": "prediction_time"
+    },
+    "training_label_timing": "unverified",
+    "use": "retrospective_research",
+    "vintage": {
+      "evidence": "Status reflects each state 2018-2019 collection in the current layer; no archived historical vintage of the release layer is used. The spatial overlays are compiled at that snapshot, and the population overlay is derived from 2010 Census blocks.",
+      "kind": "current_snapshot"
+    }
+  },
+  "event_key_column": "reported_date",
+  "external_threshold": null,
+  "features": [
+    "substance_released",
+    "state",
+    "report_year"
+  ],
+  "features_documented_at": "prediction_time",
+  "high_cardinality_columns": [
+    "lust_id",
+    "population_within_1500ft"
+  ],
+  "id_columns": [
+    "lust_id"
+  ],
+  "label_source_columns": [
+    "Status"
+  ],
+  "measurements": [
+    {
+      "column": "population_within_1500ft",
+      "frame": "count of people estimated within 1,500 feet of the release location, computed by the EPA UST Finder spatial overlay from 2010 Census blocks at compilation time; shipped as a descriptive carry column, not a report-time measurement and not scored",
+      "unit": "people"
+    },
+    {
+      "column": "domestic_wells_within_1500ft",
+      "frame": "count of private domestic wells estimated within 1,500 feet of the release location, computed by the EPA UST Finder spatial overlay at compilation time; shipped as a descriptive carry column, not a report-time measurement and not scored",
+      "unit": "wells"
+    }
+  ],
+  "name": "lust-release-longterm-status",
+  "positive_label": 1,
+  "post_hoc_columns": [
+    "Status"
+  ],
+  "split_windows": {
+    "eval": {
+      "end": "2007-01-01T00:00:00.000",
+      "start": "2006-01-01T00:00:00.000"
+    },
+    "holdout": {
+      "end": "2009-01-01T00:00:00.000",
+      "start": "2007-01-01T00:00:00.000"
+    },
+    "train": {
+      "end": "2006-01-01T00:00:00.000",
+      "start": "2004-01-01T00:00:00.000"
+    }
+  },
+  "splits": {
+    "train": "public/train.csv",
+    "eval": "public/eval.csv",
+    "holdout": "private/holdout.csv"
+  },
+  "target": "still_open_at_snapshot",
+  "task": {
+    "decision_user": "A state UST and LUST program manager triaging a newly reported release for corrective-action priority.",
+    "features": [
+      {
+        "availability": "Recorded on the state release record at report time; blank for many records and states, kept blank rather than imputed.",
+        "evidence_url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1",
+        "meaning": "Substance recorded on the release record, carried as trimmed text with a blank missing category rather than an invented level. The source does not document a fixed substance vocabulary.",
+        "name": "substance_released"
+      },
+      {
+        "availability": "Present on every release record; territories and tribal records are excluded from the frozen population.",
+        "evidence_url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1",
+        "meaning": "State jurisdiction administering the release, shipped as a two-letter USPS code, capturing program-practice differences at the report instant.",
+        "name": "state"
+      },
+      {
+        "availability": "Derived at construction from the parsed report date on every included record.",
+        "evidence_url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/UST_Finder_Feature_Layer_2/FeatureServer/1",
+        "meaning": "Calendar year of the recorded report date, capturing program-era and reporting-system changes.",
+        "name": "report_year"
+      }
+    ],
+    "outcome_horizon": "Cleanup status as of each state 2018-2019 data collection, roughly 10 to 14 years after the report for the 2004-2008 cohort; the source has no closure date, so this is a snapshot label rather than a fixed-horizon survival outcome.",
+    "population": "Release records whose Reported_Date falls from 2004-01-01 through 2008-12-31 in the 50 states or the District of Columbia, with a parsed non-null Reported_Date and a snapshot Status of Open or No Further Action. Records from territories and tribal jurisdictions, records whose snapshot Status is Unknown or blank, records with a missing report date, and release rows that exactly duplicate another row on facility identifier, release identifier, report date, jurisdiction and snapshot status are excluded, and their counts are reported rather than silently dropped. The exclusion of Unknown-status records is the one outcome-conditioned eligibility rule and is fixed by the task, not chosen from scores.",
+    "prediction_time": "At the release report date recorded by the state program (Reported_Date), when the release first enters the state program record and before any cleanup status is known. Only fields fixed at that instant are scored; spatial overlays attached at the later 2018-2019 compilation ship as descriptive carries.",
+    "question": "Will a leaking underground storage tank release reported between 2004 and 2008 still be classified Open, rather than No Further Action, at the 2018-2019 state data snapshot?",
+    "simple_references": "Majority-class rate, state-only base rates, state-and-report-year base rates, and a logistic model using only state and report year. All such label-derived rates use training labels only and are never shipped as features.",
+    "split_policy": "Fixed chronological boundaries on Reported_Date with half-open windows: train 2004-01-01 through 2005-12-31, eval 2006-01-01 through 2006-12-31, holdout 2007-01-01 through 2008-12-31. No embargo, because each row is an independent release event with report-time features and a single later snapshot outcome.",
+    "target": "1 if Status equals Open at the 2018-2019 state data snapshot; 0 if Status equals No Further Action; records with Unknown or missing Status are excluded.",
+    "usefulness": "The snapshot cleanup status is observed years after the report and is absent from the decision-time record, so a model must combine the released substance, the administering jurisdiction and the reporting era rather than copy a field. It supports triage of which newly reported releases are likely to remain unresolved and need earlier remedial attention. Because the site-setting spatial overlays postdate the report, they are not scored, so the honest signal is jurisdiction, product type and era; a model is useful only if it beats state-and-report-year base rates."
+  },
+  "time_column": "reported_date",
+  "timing": {
+    "features": {
+      "period": null,
+      "published_days_after_period_end": null,
+      "source_kind": "administrative_record"
+    },
+    "observations": [],
+    "prediction_instant": {
+      "citation": "Reported_Date is the release discovery or report date recorded by the state program; the label is the cleanup status at the later state 2018-2019 data collection.",
+      "days_after_period_end": null,
+      "kind": "event_time",
+      "period": null
+    },
+    "row_selection": {
+      "fields": [
+        "Reported_Date",
+        "State",
+        "Status",
+        "Facility_ID",
+        "LUST_ID"
+      ],
+      "latest_period_used": null,
+      "rule": "Keep records whose parsed Reported_Date lies in the half-open window from 2004-01-01 to 2009-01-01, whose State resolves to one of the 50 states or the District of Columbia, and whose snapshot Status is Open or No Further Action; collapse rows that exactly duplicate another row on Facility_ID, LUST_ID, report date, jurisdiction and Status to the lowest layer OBJECTID. Records with Unknown or blank Status, a missing report date, or a territory or tribal jurisdiction are excluded and counted. The Unknown-status exclusion is the only outcome conditioning and is fixed by the frozen population rule."
+    }
+  },
+  "unit_validation": {
+    "checks": 2,
+    "mismatches": 0,
+    "source": "source-checks.json: unit checks",
+    "evidence_sha256": "705166c48e22cbb346e7e64cf5c0a0630f95478da22d4f059d06f9e1e423fa46"
+  },
+  "expected_duplicate_ids": 0,
+  "positive_events": {
+    "train": {
+      "positives": 2386,
+      "distinct_events": 539
+    },
+    "eval": {
+      "positives": 1341,
+      "distinct_events": 280
+    },
+    "holdout": {
+      "positives": 2237,
+      "distinct_events": 540
+    }
+  },
+  "adversarial_battery": {
+    "version": "1.0.0",
+    "ok": true,
+    "input_digest": "2c934d2e977833401d67f3a0bbfd439e70d1700fb93f66be353e8dde75aaf7f7",
+    "code": {
+      "artifact_scrub.py": "8c663253e691a7b8751f9c853b40a3752a833360caafb1ea8e8f534e64af4b68",
+      "leakage_battery.py": "adbf7ee0aca0012b78cc1f1e4aeb968a23717cae30f66a02e080215e75f830e3",
+      "recovery_recipes.py": "f64c542fcda232169c95ace17421b45275194b934938c0ea4c9b68e6f844ad0e"
+    },
+    "freeze_sha256": "d18f9e5445b9e605741e05e7c99b538d1e5583f202dda03bb9bb4214c59a5df8",
+    "all_results_sha256": "dfcc8f7bb5adea7db7457338e78daf6074d33e9c7abf63daef3e0f5ed935e6f8",
+    "detail_files": {
+      "results-0000.jsonl": {
+        "sha256": "bd5fc8d14c4f8eb8252d918026ab4bbbb485e0c4b0dc11a6fdb29e6d2f62a2ff",
+        "bytes": 188712
+      }
+    },
+    "exact": [],
+    "failures": [],
+    "flags": [],
+    "flag_count": 0,
+    "attempted": {
+      "statistical": 604,
+      "supervised": 312
+    },
+    "constant_or_uncovered": {
+      "statistical": 40,
+      "supervised": 146
+    },
+    "scope": {
+      "donors": [
+        "self",
+        "all"
+      ],
+      "exploratory_keys": 8,
+      "exploratory_operands": 8,
+      "max_columns": 128,
+      "scored_labels_read": false,
+      "tokens_per_column": 80,
+      "train_labels": "supervised controls only"
+    }
+  }
+}
