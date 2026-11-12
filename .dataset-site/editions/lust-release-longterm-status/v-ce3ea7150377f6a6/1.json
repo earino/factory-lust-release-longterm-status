@@ -1,0 +1,313 @@
+{
+  "artifact_version": "e4fd62e37aa5a8c6e628d1e81f52f2b72c070bf45ffd5730bf5a0361cbd5b715",
+  "assets": {
+    "LICENSE-EVIDENCE.json": {
+      "bytes": 677,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/LICENSE-EVIDENCE.json",
+      "hf_path": "LICENSE-EVIDENCE.json",
+      "sha256": "cbb55d09b5411774eae754dda71fe64169df36199733a81a61b9e4cd3eb81c53"
+    },
+    "LICENSE.md": {
+      "bytes": 1159,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/LICENSE.md",
+      "hf_path": "LICENSE.md",
+      "sha256": "440be191c25734c7c87eaa8f31f8e47f522a28ae82b99483662000da29634d38"
+    },
+    "README.md": {
+      "bytes": 5912,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/README.md",
+      "hf_path": "README.md",
+      "sha256": "198699d57ec2f63febeb446d5d054ce3d70de86a68871e36d0ab51fd13b75cbd"
+    },
+    "SOURCES.json": {
+      "bytes": 16518,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/SOURCES.json",
+      "hf_path": "SOURCES.json",
+      "sha256": "3bc6102ad9f8df2c668d1c4335f072d43f49796217c392d2b0abeb265f92cfa5"
+    },
+    "evaluation.json": {
+      "bytes": 1410,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/evaluation.json",
+      "hf_path": "evaluation.json",
+      "sha256": "81aba71c6ba30b95580c67f76e28680bdc41a67fce79f5530a5955890b2a9930"
+    },
+    "extract__meta.json": {
+      "bytes": 1517,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/extract__meta.json",
+      "hf_path": "extract/meta.json",
+      "sha256": "a0b11dd22ad2ed2af4043b3d6755f4e3d8f1382f57311831997a24bf2bbf9003"
+    },
+    "extract__private__holdout.csv": {
+      "bytes": 1308390,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/extract__private__holdout.csv",
+      "hf_path": "extract/private/holdout.csv",
+      "sha256": "7bfd234e12598e68bef38ccec41366522a3229f4e14e373129d9ee21e14c899e"
+    },
+    "extract__public__eval.csv": {
+      "bytes": 802179,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/extract__public__eval.csv",
+      "hf_path": "extract/public/eval.csv",
+      "sha256": "5c88a8e2801dbfc84c0b06fb6948ca606960d4657e3cb32f72c7ac8c2eabe9f7"
+    },
+    "extract__public__train.csv": {
+      "bytes": 1605060,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/extract__public__train.csv",
+      "hf_path": "extract/public/train.csv",
+      "sha256": "3859dbbe0c152e292988708eebd53c6f7de722765feb143eb58c611487cbe1a4"
+    },
+    "extract__quality.json": {
+      "bytes": 17608,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/extract__quality.json",
+      "hf_path": "extract/quality.json",
+      "sha256": "a2e4300db7ddc024a9d714a2ec8627d19a093885c19c685c973e5a5a95f24bfc"
+    },
+    "get_dataset.py": {
+      "bytes": 3680,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/get_dataset.py",
+      "hf_path": "get_dataset.py",
+      "sha256": "fad89222d50f9d9709225c34909be74c591df409c08b8b5951eba9d3cadfdd48"
+    },
+    "qualification.json": {
+      "bytes": 17267,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/qualification.json",
+      "hf_path": "qualification.json",
+      "sha256": "1f91271302f10c2e207d81a3a5eedb7c83770d9533e4b3badd976820346a497a"
+    },
+    "reproduction__LICENSE-CC0-1.0.txt": {
+      "bytes": 7048,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__LICENSE-CC0-1.0.txt",
+      "hf_path": "reproduction/LICENSE-CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    "reproduction__LICENSE-MIT.txt": {
+      "bytes": 1124,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__LICENSE-MIT.txt",
+      "hf_path": "reproduction/LICENSE-MIT.txt",
+      "sha256": "56b932ff064e5da113ae10175c8546325f64f26e1ece71683ffcbf8b2304fe1c"
+    },
+    "reproduction__artifact_scrub.py": {
+      "bytes": 11369,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__artifact_scrub.py",
+      "hf_path": "reproduction/artifact_scrub.py",
+      "sha256": "8c663253e691a7b8751f9c853b40a3752a833360caafb1ea8e8f534e64af4b68"
+    },
+    "reproduction__build.py": {
+      "bytes": 37105,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__build.py",
+      "hf_path": "reproduction/build.py",
+      "sha256": "71677dbad8174534f20128def18193472ff99f26a9c17fb5555ba0d773598ae9"
+    },
+    "reproduction__construction.json": {
+      "bytes": 19631,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__construction.json",
+      "hf_path": "reproduction/construction.json",
+      "sha256": "5dc55bb519b2dd3c6704e872d7687c6a0727f3168e8292ae9849d86ff2064d9b"
+    },
+    "reproduction__dataset_package.py": {
+      "bytes": 7927,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__dataset_package.py",
+      "hf_path": "reproduction/dataset_package.py",
+      "sha256": "c2364defe58dcc99322be59a1bb04894ce00e823ce37afeb37bc31012f744327"
+    },
+    "reproduction__dataset_run.py": {
+      "bytes": 12381,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__dataset_run.py",
+      "hf_path": "reproduction/dataset_run.py",
+      "sha256": "8085fae14d6e93b852e692e18c1ef72113a3601f48f78901b6d1ae6db278de57"
+    },
+    "reproduction__get_dataset.py": {
+      "bytes": 3680,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__get_dataset.py",
+      "hf_path": "reproduction/get_dataset.py",
+      "sha256": "fad89222d50f9d9709225c34909be74c591df409c08b8b5951eba9d3cadfdd48"
+    },
+    "reproduction__leakage_battery.py": {
+      "bytes": 17379,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__leakage_battery.py",
+      "hf_path": "reproduction/leakage_battery.py",
+      "sha256": "adbf7ee0aca0012b78cc1f1e4aeb968a23717cae30f66a02e080215e75f830e3"
+    },
+    "reproduction__provenance.json": {
+      "bytes": 573,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__provenance.json",
+      "hf_path": "reproduction/provenance.json",
+      "sha256": "5b921424d09e4603d71d477d4f6e66f32a5f1d6e43394b9000ebb830082f9cc6"
+    },
+    "reproduction__qualify_dataset.py": {
+      "bytes": 66067,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__qualify_dataset.py",
+      "hf_path": "reproduction/qualify_dataset.py",
+      "sha256": "bff6d43d0904182e2612c32bab702e41addbf389904a236c209e78be39e37a6b"
+    },
+    "reproduction__recovery_recipes.py": {
+      "bytes": 17609,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__recovery_recipes.py",
+      "hf_path": "reproduction/recovery_recipes.py",
+      "sha256": "f64c542fcda232169c95ace17421b45275194b934938c0ea4c9b68e6f844ad0e"
+    },
+    "reproduction__requirements.txt": {
+      "bytes": 160,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__requirements.txt",
+      "hf_path": "reproduction/requirements.txt",
+      "sha256": "5c72f3268174d20364624f76680e189c408a05dba2e7b8cfe12d077b3865e7f0"
+    },
+    "reproduction__source.json": {
+      "bytes": 11037,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__source.json",
+      "hf_path": "reproduction/source.json",
+      "sha256": "bf4ee28ba0dd49adc54b6a5a3af196f169aad511c2fcb2406f9d6e36b99275ba"
+    },
+    "reproduction__source_io.py": {
+      "bytes": 5607,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__source_io.py",
+      "hf_path": "reproduction/source_io.py",
+      "sha256": "0c60eed4968cd342148efbaac7e4fa98f00708d8e6c14c0929928687b9af1ea3"
+    },
+    "reproduction__train.py": {
+      "bytes": 2500,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__train.py",
+      "hf_path": "reproduction/train.py",
+      "sha256": "a3c6bcf13735bc85c52129ded68f839090dffdc266ebc3810dc61b2e6ea5e7e8"
+    },
+    "reproduction__validate.py": {
+      "bytes": 1277,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__validate.py",
+      "hf_path": "reproduction/validate.py",
+      "sha256": "b597e7f84fed614e64b4a86fbecbd6ec0145916a24d0d221a796586976418e7b"
+    },
+    "reproduction__validate.sh": {
+      "bytes": 482,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/reproduction__validate.sh",
+      "hf_path": "reproduction/validate.sh",
+      "sha256": "3f06ca48f11c2e05d331b4d8394284925de660c1d4b086d2f8243959e83b7e6d"
+    },
+    "source-checks.json": {
+      "bytes": 15300,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/source-checks.json",
+      "hf_path": "source-checks.json",
+      "sha256": "705166c48e22cbb346e7e64cf5c0a0630f95478da22d4f059d06f9e1e423fa46"
+    },
+    "source-snapshot.tar.gz": {
+      "bytes": 874975,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/source-snapshot.tar.gz",
+      "hf_path": "source-snapshot.tar.gz",
+      "sha256": "8da1e5f0bb9c27df3c64f674ac497cbad5186a0ab4330e8ea9d7169d8d39ab34"
+    },
+    "verify_dataset.py": {
+      "bytes": 1276,
+      "download": "https://github.com/earino/factory-lust-release-longterm-status/releases/download/v-ce3ea7150377f6a6/verify_dataset.py",
+      "hf_path": "verify_dataset.py",
+      "sha256": "f4a4bb7f565cdbd075c520621f881876b491eaed91a5e6e70afb31e4753f9834"
+    }
+  },
+  "baseline": {
+    "metrics": {
+      "Validation calendar_identity auc": 0.5017442015534531,
+      "Validation calendar_identity brier": 0.13844349141990345,
+      "Validation full_model auc": 0.8105961663385577,
+      "Validation full_model brier": 0.11204408415356631,
+      "Validation majority_prior auc": 0.5,
+      "Validation majority_prior brier": 0.13837729109310853
+    },
+    "scope": "Existing unmodified runner baseline on public validation only; no holdout scoring"
+  },
+  "configs": [],
+  "dataset": "lust-release-longterm-status",
+  "documents": [
+    [
+      "README.md",
+      "Loading and reproduction"
+    ],
+    [
+      "evaluation.json",
+      "Measured baseline"
+    ],
+    [
+      "LICENSE.md",
+      "Licence and attribution"
+    ]
+  ],
+  "domain": "U.S. Environmental Protection Agency, Office of Underground Storage Tanks and Office of Research and Development, with the Association of State and Territorial Solid Waste Management Officials",
+  "evaluation_use": "retrospective_research",
+  "github_repository": "earino/factory-lust-release-longterm-status",
+  "hf_repository": "earino/factory-lust-release-longterm-status",
+  "licenses": {
+    "attribution": "EPA's Office of Underground Storage Tanks EPA's Office of Research and Development The Association of State and Territorial Solid Waste Management Officials",
+    "citation": "",
+    "code": "MIT",
+    "compilation_scope": "Our additional compilation rights only; upstream terms remain in force.",
+    "data_compilation": "CC0-1.0",
+    "source_data": "EPA Public Domain License (U.S. public domain; 17 U.S.C. 105)"
+  },
+  "limitations": [
+    "The release layer has no closure date: Status is a snapshot as of each state's 2018-2019 collection, so the label is 'not yet No Further Action at the snapshot', not a fixed-horizon survival outcome.",
+    "Follow-up length differs slightly by report year (about 10-14 years), so report year and horizon are partly confounded; chronological splits preserve the shift rather than removing it.",
+    "State programs differ in what counts as a reportable release, when reporting began, and how No Further Action is granted; state is both a feature and a source of label heterogeneity.",
+    "Release Substance is blank for some records and states, and status Unknown exists (notably Kentucky), so missingness and Unknown exclusions must be modelled explicitly.",
+    "Population, wells, land use, source-water and floodplain fields are current-vintage EPA overlays, not measurements available in 2004-2008; they are slow-changing proxies only.",
+    "The compilation is state-sourced and EPA-standardized; state agencies are credited in the layer metadata, and state-specific terms were not separately researched.",
+    "This is retrospective current-vintage research; it does not establish that the fields were operationally available to a manager at the historical decision instant.",
+    "The release layer has no closure date; Status is a snapshot as of each state 2018-2019 collection, so the label is not yet No Further Action at the snapshot, not a fixed-horizon survival outcome.",
+    "Follow-up length differs by report year, roughly 10 to 14 years, so report year and outcome horizon are partly confounded; the chronological splits preserve that shift rather than removing it.",
+    "Only report-time fields are scored. The five spatial overlays, population and domestic wells within 1500 feet, land use, source water protection area and 100-year floodplain, are attached at the 2018-2019 compilation and the population overlay is derived from 2010 Census blocks, so they postdate the report instant and are shipped as unscored descriptive carry columns instead of features.",
+    "Substance is blank for most records, so the product-type signal is thin; blank values are kept blank rather than imputed, and a fully blank scored feature column fails rather than shipping empty.",
+    "Exact duplicate release records sharing facility identifier, release identifier, report date, jurisdiction and snapshot status are collapsed to the single row with the lowest layer OBJECTID before splitting. This may also merge genuinely separate same-day releases at one facility that share a generic release identifier such as Release 1, which the source cannot distinguish by attributes alone.",
+    "The population and domestic well counts within 1500 feet are continuous counts with many distinct values, so they are declared as high cardinality and must be treated as numeric rather than categorical levels.",
+    "The compilation is state-sourced and EPA-standardised; state agency terms were not separately researched.",
+    "This is retrospective current-vintage research; it does not establish that the fields were operationally available to a manager at the historical decision instant, and the training label timing is unverified.",
+    "No uncertainty interval; observed differences do not establish universal headroom"
+  ],
+  "post": {
+    "paragraphs": [
+      "Will a leaking underground storage tank release reported between 2004 and 2008 still be classified Open, rather than No Further Action, at the 2018-2019 state data snapshot?",
+      "Population: Release records whose Reported_Date falls from 2004-01-01 through 2008-12-31 in the 50 states or the District of Columbia, with a parsed non-null Reported_Date and a snapshot Status of Open or No Further Action. Records from territories and tribal jurisdictions, records whose snapshot Status is Unknown or blank, records with a missing report date, and release rows that exactly duplicate another row on facility identifier, release identifier, report date, jurisdiction and snapshot status are excluded, and their counts are reported rather than silently dropped. The exclusion of Unknown-status records is the one outcome-conditioned eligibility rule and is fixed by the task, not chosen from scores.",
+      "Target: 1 if Status equals 'Open' at the 2018-2019 state data snapshot; 0 if Status equals 'No Further Action'; records with 'Unknown' or missing Status are excluded.",
+      "Prediction time: At the release report date recorded by the state program (Reported_Date), when the release first enters the state program record and before any cleanup status is known. Only fields fixed at that instant are scored; spatial overlays attached at the later 2018-2019 compilation ship as descriptive carries.",
+      "Splits: Fixed chronological boundaries by Reported_Date: train 2004-01-01 through 2005-12-31, eval 2006-01-01 through 2006-12-31, holdout 2007-01-01 through 2008-12-31. No embargo: rows are independent release events with features fixed at report, and the outcome is measured at one later snapshot.",
+      "Outcome horizon: Cleanup status as of each state's 2018-2019 data collection, i.e. roughly 10-14 years after the report for the 2004-2008 cohort.",
+      "Inputs: substance_released: Substance recorded on the release record, carried as trimmed text with a blank missing category rather than an invented level. The source does not document a fixed substance vocabulary.; state: State jurisdiction administering the release, shipped as a two-letter USPS code, capturing program-practice differences at the report instant.; report_year: Calendar year of the recorded report date, capturing program-era and reporting-system changes."
+    ],
+    "title": "Lust Release Longterm Status"
+  },
+  "publication_commits": {
+    "github": "8d30b141f5bade65042593e886c7e4886ce56781",
+    "huggingface": "72f3632d19f9bcc5f2de7bc4568624cbd1a7c9e9"
+  },
+  "qualification": {
+    "gate_version": "1.6.1",
+    "result": "PASSED"
+  },
+  "record_sha256": "4009abfc3183180ad66f03556533236ecb58a8c63ec34a142e8d016a4123dd0e",
+  "release_date": "2026-11-12",
+  "release_schema": "factory-1",
+  "release_tag": "v-ce3ea7150377f6a6",
+  "schema_version": 1,
+  "site_revision": 1,
+  "source": {
+    "name": "U.S. Environmental Protection Agency, Office of Underground Storage Tanks and Office of Research and Development, with the Association of State and Territorial Solid Waste Management Officials",
+    "url": "https://www.epa.gov/ust/ust-finder"
+  },
+  "splits": {
+    "eval": {
+      "rows": 8107
+    },
+    "holdout": {
+      "rows": 13169
+    },
+    "train": {
+      "rows": 16192
+    }
+  },
+  "summary": "Will a leaking underground storage tank release reported between 2004 and 2008 still be classified Open, rather than No Further Action, at the 2018-2019 state data snapshot?",
+  "task_type": "binary-classification",
+  "title": "Lust Release Longterm Status",
+  "urls": {
+    "catalog": "https://earino.github.io/dataset-factory-site/",
+    "github": "https://github.com/earino/factory-lust-release-longterm-status",
+    "github_release": "https://github.com/earino/factory-lust-release-longterm-status/releases/tag/v-ce3ea7150377f6a6",
+    "huggingface": "https://huggingface.co/datasets/earino/factory-lust-release-longterm-status",
+    "huggingface_version": "https://huggingface.co/datasets/earino/factory-lust-release-longterm-status/tree/v-ce3ea7150377f6a6",
+    "version": "https://earino.github.io/factory-lust-release-longterm-status/versions/v-ce3ea7150377f6a6/",
+    "website": "https://earino.github.io/factory-lust-release-longterm-status/"
+  }
+}

@@ -15,6 +15,14 @@ configs:
     path: extract/private/holdout.csv
 ---
 
+<!-- dataset-factory:links -->
+**Dataset Factory · v-ce3ea7150377f6a6**
+
+[Dataset website](https://earino.github.io/factory-lust-release-longterm-status/versions/v-ce3ea7150377f6a6/) · [GitHub release](https://github.com/earino/factory-lust-release-longterm-status/releases/tag/v-ce3ea7150377f6a6) · [Hugging Face](https://huggingface.co/datasets/earino/factory-lust-release-longterm-status/tree/v-ce3ea7150377f6a6) · [Catalogue](https://earino.github.io/dataset-factory-site/)
+
+Artifact: e4fd62e37aa5a8c6e628d1e81f52f2b72c070bf45ffd5730bf5a0361cbd5b715
+<!-- /dataset-factory:links -->
+
 # Will a reported U.S. leaking underground storage tank release still be unresolved a decade later? Predicting long-run LUST cleanup status from report-time product and site attributes
 
 Will a leaking underground storage tank release reported between 2004 and 2008 still be classified Open, rather than No Further Action, at the 2018-2019 state data snapshot?
